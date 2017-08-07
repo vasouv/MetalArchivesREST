@@ -54,3 +54,9 @@ If you deploy on Payara Micro, the endpoints are shown in the console. Currently
   "releaseDate": "July 17th, 2000"
 }
 ```
+## TODO
+- [ ] Payara Micro Maven plugin (see if I actually need it)
+- [ ] findBand() endpoint and others
+- [ ] MicroProfile (switch maybe, if I don't use other APIs)
+- [ ] use Response to demonstrate usage
+- [ ] REFACTORING - extract code to methods
