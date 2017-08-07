@@ -1,0 +1,234 @@
+{
+    "status": "success",
+    "code": 200,
+    "message": "ok",
+    "data": {
+        "upcoming_albums": [
+            {
+                "band": {
+                    "name": "Mordenial",
+                    "id": "3540394298"
+                },
+                "album": {
+                    "title": "The Plague",
+                    "id": "645022"
+                },
+                "release_date": "July 10th 2017"
+            },
+            {
+                "band": {
+                    "name": "Regressus ad Infinitum",
+                    "id": "56638"
+                },
+                "album": {
+                    "title": "Regressus ad...",
+                    "id": "656183"
+                },
+                "release_date": "July 10th 2017"
+            },
+            {
+                "band": {
+                    "name": "Hard Venom",
+                    "id": "101443"
+                },
+                "album": {
+                    "title": "Vampire Rising",
+                    "id": "657802"
+                },
+                "release_date": "July 10th 2017"
+            },
+            {
+                "band": {
+                    "name": "Akatharsia",
+                    "id": "3540382281"
+                },
+                "album": {
+                    "title": "No Generation...",
+                    "id": "660020"
+                },
+                "release_date": "July 10th 2017"
+            },
+            {
+                "band": {
+                    "name": "Silent Knight",
+                    "id": "3540360659"
+                },
+                "album": {
+                    "title": "The Masterplan",
+                    "id": "660150"
+                },
+                "release_date": "July 10th 2017"
+            },
+            {
+                "band": {
+                    "name": "Sloth",
+                    "id": "16591"
+                },
+                "album": {
+                    "title": "7/10/17",
+                    "id": "660462"
+                },
+                "release_date": "July 10th 2017"
+            },
+            {
+                "band": {
+                    "name": "Mourning Souls",
+                    "id": "3540411476"
+                },
+                "album": {
+                    "title": "Harsh Noise Wall...",
+                    "id": "660465"
+                },
+                "release_date": "July 10th 2017"
+            },
+            {
+                "band": {
+                    "name": "Nigrum Mortem",
+                    "id": "3540411887"
+                },
+                "album": {
+                    "title": "Waging War on God",
+                    "id": "660488"
+                },
+                "release_date": "July 10th 2017"
+            },
+            {
+                "band": {
+                    "name": "Mourning Souls",
+                    "id": "3540411476"
+                },
+                "album": {
+                    "title": "A Tribute to...",
+                    "id": "660519"
+                },
+                "release_date": "July 10th 2017"
+            },
+            {
+                "band": {
+                    "name": "Jute Gyte",
+                    "id": "3540308568"
+                },
+                "album": {
+                    "title": "Oviri",
+                    "id": "660520"
+                },
+                "release_date": "July 10th 2017"
+            },
+            {
+                "band": {
+                    "name": "Nhor",
+                    "id": "3540333774"
+                },
+                "album": {
+                    "title": "Wildflowers: Summer",
+                    "id": "660523"
+                },
+                "release_date": "July 10th 2017"
+            },
+            {
+                "band": {
+                    "name": "Totengott",
+                    "id": "3540407923"
+                },
+                "album": {
+                    "title": "Doppelgänger",
+                    "id": "649530"
+                },
+                "release_date": "July 11th 2017"
+            },
+            {
+                "band": {
+                    "name": "God Root",
+                    "id": "3540406086"
+                },
+                "album": {
+                    "title": "Salt and Rot",
+                    "id": "654302"
+                },
+                "release_date": "July 11th 2017"
+            },
+            {
+                "band": {
+                    "name": "Hateful Transgression",
+                    "id": "3540405343"
+                },
+                "album": {
+                    "title": "Meaningless",
+                    "id": "655448"
+                },
+                "release_date": "July 11th 2017"
+            },
+            {
+                "band": {
+                    "name": "Claymorean",
+                    "id": "23673"
+                },
+                "album": {
+                    "title": "Sounds from a...",
+                    "id": "629003"
+                },
+                "release_date": "July 12th 2017"
+            },
+            {
+                "band": {
+                    "name": "Torture Squad",
+                    "id": "7346"
+                },
+                "album": {
+                    "title": "Far Beyond Existence",
+                    "id": "653738"
+                },
+                "release_date": "July 13th 2017"
+            },
+            {
+                "band": {
+                    "name": "Mouldered",
+                    "id": "3540419282"
+                },
+                "album": {
+                    "title": "Chronology of a...",
+                    "id": "655001"
+                },
+                "release_date": "July 13th 2017"
+            },
+            {
+                "band": {
+                    "name": "Implied",
+                    "id": "3540415480"
+                },
+                "album": {
+                    "title": "Promo 2017",
+                    "id": "659692"
+                },
+                "release_date": "July 13th 2017"
+            },
+            {
+                "band": {
+                    "name": "Wren",
+                    "id": "3540381825"
+                },
+                "album": {
+                    "title": "Auburn Rule",
+                    "id": "646736"
+                },
+                "release_date": "July 14th 2017"
+            },
+            {
+                "band": {
+                    "name": "Vesicant",
+                    "id": "3540382857"
+                },
+                "album": {
+                    "title": "Shadows of...",
+                    "id": "649523"
+                },
+                "release_date": "July 14th 2017"
+            }
+        ]
+    },
+    "hash": "269dd64b4c908c5e58f8b4dc5e3de9f5",
+    "donation": {
+        "message": "Please, donate to keep this service alive and help its further development",
+        "donation_url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=27JWD2KFQHCTE"
+    }
+}
