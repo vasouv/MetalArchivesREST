@@ -10,4 +10,47 @@ First, you must obtain an API key to use it as a Query Parameter. The API key mu
 ## Deployment
 Being a Java EE 7 Maven web application, it runs anywhere. I find it easier to run on a full Payara server (for dev) and on Payara Micro when I actually want to use it.
 
-For Payara Micro, do `java -jar <payara micro filename>.jar --deploy <project filename>.war --port 8384` and then you can use any client to request.
+For Payara Micro, do `java -jar micro.jar --deploy metalrest.war --port 8384` and then you can use any client to request.
+
+## Endpoints and responses
+If you deploy on Payara Micro, the endpoints are shown in the console. Currently these two are ready:
+```
+.../rest/resource/upcoming
+.../rest/resource/album/{id}
+```
+### Upcoming return
+```
+[
+  {
+    "albumID": "645022",
+    "albumTitle": "The Plague",
+    "bandID": "3540394298",
+    "bandName": "Mordenial",
+    "releaseDate": "July 10th 2017"
+  },
+  {
+    "albumID": "656183",
+    "albumTitle": "Regressus ad...",
+    "bandID": "56638",
+    "bandName": "Regressus ad Infinitum",
+    "releaseDate": "July 10th 2017"
+  },
+  {
+    "albumID": "657802",
+    "albumTitle": "Vampire Rising",
+    "bandID": "101443",
+    "bandName": "Hard Venom",
+    "releaseDate": "July 10th 2017"
+  }
+]
+```
+### Album return
+```
+{
+  "albumID": "23",
+  "albumTitle": "Haven",
+  "bandID": "8",
+  "bandName": "Dark Tranquillity",
+  "releaseDate": "July 17th, 2000"
+}
+```
