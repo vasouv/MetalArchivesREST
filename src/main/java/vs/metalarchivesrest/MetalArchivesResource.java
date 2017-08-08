@@ -25,6 +25,7 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import vs.metalarchivesrest.entities.Album;
+import vs.metalarchivesrest.entities.Song;
 
 /**
  *
@@ -104,6 +105,26 @@ public class MetalArchivesResource {
         String albumTitle = albumObject.getString("title");
         String albumId = albumObject.getString("id");
         String albumYear = albumObject.getString("release date");
+        
+        //Extracts the songs list
+        JsonArray songsArray = albumObject.getJsonArray("songs");
+        
+        //Iterating the songs array and populating a List
+        List<Song> tracklist = new ArrayList();
+        for (JsonValue jsonValue : songsArray) {
+            JsonObject track = (JsonObject) jsonValue;
+            
+            int trackNo = songsArray.indexOf(jsonValue) + 1;
+            String trackTitle = track.getString("title");
+            String trackLength = track.getString("length");
+            
+            Song song = new Song();
+            song.setNo(trackNo);
+            song.setTitle(trackTitle);
+            song.setLength(trackLength);
+            
+            tracklist.add(song);
+        }
 
         //Creates and returns the found album
         Album album = new Album();
@@ -113,6 +134,7 @@ public class MetalArchivesResource {
         album.setAlbumTitle(albumTitle);
         album.setAlbumID(albumId);
         album.setReleaseDate(albumYear);
+        album.setTrackList(tracklist);
 
         return album;
     }
