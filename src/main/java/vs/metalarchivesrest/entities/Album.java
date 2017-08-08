@@ -1,5 +1,7 @@
 package vs.metalarchivesrest.entities;
 
+import java.util.List;
+
 /**
  *
  * @author vasouv
@@ -11,6 +13,7 @@ public class Album {
     private String bandName;
     private String bandID;
     private String releaseDate;
+    private List<Song> trackList;
 
     public String getAlbumTitle() {
         return albumTitle;
@@ -51,7 +54,13 @@ public class Album {
     public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
     }
-    
-    
+
+    public List<Song> getTrackList() {
+        return trackList;
+    }
+
+    public void setTrackList(List<Song> trackList) {
+        this.trackList = trackList;
+    }
     
 }
