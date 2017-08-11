@@ -57,6 +57,7 @@ If you deploy on Payara Micro, the endpoints are shown in the console. Currently
 ## TODO
 - [ ] switch to Wildfly Swarm and run as jar
 - [ ] findBand() endpoint and others
+- [ ] add album cover url to Album
 - [ ] MicroProfile (switch maybe, if I don't use other APIs)
 - [ ] use Response to demonstrate usage
 - [ ] REFACTORING - extract code to methods
