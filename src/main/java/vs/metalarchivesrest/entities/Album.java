@@ -13,6 +13,7 @@ public class Album {
     private String bandName;
     private String bandID;
     private String releaseDate;
+    private String coverURL;
     private List<Song> trackList;
 
     public String getAlbumTitle() {
@@ -61,6 +62,14 @@ public class Album {
 
     public void setTrackList(List<Song> trackList) {
         this.trackList = trackList;
+    }
+
+    public String getCoverURL() {
+        return coverURL;
+    }
+
+    public void setCoverURL(String coverURL) {
+        this.coverURL = coverURL;
     }
     
 }
