@@ -52,6 +52,7 @@ If you deploy on Payara Micro, the endpoints are shown in the console. Currently
   "albumTitle": "Haven",
   "bandID": "8",
   "bandName": "Dark Tranquillity",
+  "coverURL": "https://www.metal-archives.com/images/2/3/23.jpg",
   "releaseDate": "July 17th, 2000",
   "trackList": [
     {

@@ -106,6 +106,7 @@ public class MetalArchivesResource {
         String albumTitle = albumObject.getString("title");
         String albumId = albumObject.getString("id");
         String albumYear = albumObject.getString("release date");
+        String albumCover = albumObject.getString("album_cover");
 
         //Extracts the songs list
         JsonArray songsArray = albumObject.getJsonArray("songs");
@@ -135,6 +136,7 @@ public class MetalArchivesResource {
         album.setAlbumTitle(albumTitle);
         album.setAlbumID(albumId);
         album.setReleaseDate(albumYear);
+        album.setCoverURL(albumCover);
         album.setTrackList(tracklist);
 
         return album;
