@@ -24,6 +24,7 @@ import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import vs.metalarchivesrest.entities.Album;
 import vs.metalarchivesrest.entities.Band;
 import vs.metalarchivesrest.entities.Song;
@@ -206,14 +207,14 @@ public class MetalArchivesResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("band/{bandID}")
-    public Band findBand(@PathParam("bandID") String bandid) {
+    public Response findBand(@PathParam("bandID") String bandid) {
         String job = target
                 .path("band")
                 .path(bandid)
                 .queryParam("api_key", properties.getProperty("api_key"))
                 .request()
                 .get(String.class);
-        
+
         //Creates a json object by reading the String response
         JsonObject initialResponse;
 
@@ -223,28 +224,28 @@ public class MetalArchivesResource {
 
         //Extracts the data (this is the useful object)
         JsonObject dataObject = initialResponse.getJsonObject("data");
-        
+
         String bandID = dataObject.getString("id");
-        
+
         String bandName = dataObject.getString("band_name");
-        
+
         String photoURL = dataObject.getString("photo");
-        
+
         String bio = dataObject.getString("bio");
-        
+
         JsonObject details = dataObject.getJsonObject("details");
         String genre = details.getString("genre");
-        
+
         JsonArray jsonDiscography = dataObject.getJsonArray("discography");
-        
+
         List<Album> discography = new ArrayList();
         for (JsonValue jsonValue : jsonDiscography) {
             JsonObject jsonAlbum = (JsonObject) jsonValue;
-            
+
             String albumTitle = jsonAlbum.getString("title");
             String albumID = jsonAlbum.getString("id");
             String albumYearRelease = jsonAlbum.getString("year");
-            
+
             Album album = new Album();
             album.setAlbumID(albumID);
             album.setAlbumTitle(albumTitle);
@@ -252,7 +253,7 @@ public class MetalArchivesResource {
 
             discography.add(album);
         }
-        
+
         Band band = new Band();
         band.setId(bandID);
         band.setGenre(genre);
@@ -260,8 +261,8 @@ public class MetalArchivesResource {
         band.setPhoto(photoURL);
         band.setBio(bio);
         band.setAlbums(discography);
-        
-        return band;
+
+        return Response.ok(band).build();
     }
 
 }
