@@ -201,5 +201,5 @@ If you deploy on Payara Micro, the endpoints are shown in the console. Currently
 - [ ] search endpoint
 - [X] add album cover url to Album
 - [ ] MicroProfile (switch maybe, if I don't use other APIs)
-- [ ] use Response to demonstrate usage
+- [X] use Response to demonstrate usage
 - [ ] REFACTORING - extract code to methods
