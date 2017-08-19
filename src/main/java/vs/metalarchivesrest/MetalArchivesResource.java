@@ -13,6 +13,7 @@ import javax.annotation.PreDestroy;
 import javax.ejb.Stateless;
 import javax.json.Json;
 import javax.json.JsonArray;
+import javax.json.JsonArrayBuilder;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
 import javax.json.JsonValue;
@@ -149,9 +150,8 @@ public class MetalArchivesResource {
      * @return list of albums in JSON
      */
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
     @Path("upcoming")
-    public List<Album> upcomingAlbums() {
+    public JsonArray upcomingAlbums() {
 
         //Holds the String response
         String job = target
@@ -173,35 +173,27 @@ public class MetalArchivesResource {
         //Now it's an array of objects
         JsonArray upcomingAlbums = dataObject.getJsonArray("upcoming_albums");
 
-        //Instantiating the list of albums to be returned
-        List<Album> returnUpcoming = new ArrayList();
+        //Instantiating the JsonArray of albums to be returned
+        JsonArrayBuilder upcomingAlbumsJsonArray = Json.createArrayBuilder();
 
         //Iterating the array and reading the objects
         for (JsonValue jsonValue : upcomingAlbums) {
             JsonObject upcoming = (JsonObject) jsonValue;
 
             JsonObject bandObject = upcoming.getJsonObject("band");
-            String bandID = bandObject.getString("id");
-            String bandName = bandObject.getString("name");
 
             JsonObject albumObject = upcoming.getJsonObject("album");
-            String albumID = albumObject.getString("id");
-            String albumTitle = albumObject.getString("title");
 
-            String releaseDate = upcoming.getString("release_date");
-
-            Album album = new Album();
-
-            album.setBandID(bandID);
-            album.setBandName(bandName);
-            album.setAlbumID(albumID);
-            album.setAlbumTitle(albumTitle);
-            album.setReleaseDate(releaseDate);
-
-            returnUpcoming.add(album);
+            upcomingAlbumsJsonArray.add(Json.createObjectBuilder()
+                    .add("albumID", albumObject.getString("id"))
+                    .add("albumTitle", albumObject.getString("title"))
+                    .add("bandID", bandObject.getString("id"))
+                    .add("bandName", bandObject.getString("name"))
+                    .add("releaseDate", upcoming.getString("release_date"))
+                    .build());
         }
 
-        return returnUpcoming;
+        return upcomingAlbumsJsonArray.build();
     }
 
     @GET
