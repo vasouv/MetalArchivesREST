@@ -1,3 +1,5 @@
+_Sadly the host em.wemakesites.net is unreachable and therefore this project does not work anymore_
+
 # MetalArchivesREST
 
 _Simple JAX-RS endpoint and client project. Uses the Client API to get the response from a REST endpoint, parses the response with JSON-P and outputs on an endpoint. Ideal for testing other techs, let's say a frontend in HTML + JS or another microservice than performs further processing._
